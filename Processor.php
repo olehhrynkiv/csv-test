@@ -132,7 +132,7 @@ class Processor
             $this->connector->deleteTransactionsByImport($this->importId);
             echo $ex->getMessage() . "\n";
         }
-
+        $this->reader->closeHandler();
     }
 
     /**

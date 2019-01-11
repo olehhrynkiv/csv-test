@@ -64,5 +64,17 @@ class CSVReader
         }
         return $row;
     }
+
+    /**
+     * close file
+     */
+    public function closeHandler()
+    {
+        try {
+            fclose($this->fileHandler);
+        } catch (Exception $ex) {
+
+        }
+    }
 }
 
