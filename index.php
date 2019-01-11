@@ -16,8 +16,8 @@ $mapping = [
     Processor::TRANSACTOIN_AMOUNT      => 'Transaction Amount',
     Processor::BATCH_DATE              => 'Batch Date',
     Processor::BATCH_REF_NUM           => 'Batch Reference Number',
-    Processor::MERCHANT_ID             => 'Merchant Name',
-    Processor::MERCHANT_NAME           => 'Merchant ID',
+    Processor::MERCHANT_ID             => 'Merchant ID',
+    Processor::MERCHANT_NAME           => 'Merchant Name',
 ];
 if (isset($argv[2])) {
     $data = json_decode($argv[2], true);
