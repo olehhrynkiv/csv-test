@@ -63,8 +63,7 @@ class DbConnector extends PDO
             return [];
         }
         $statement = $this->prepare('SELECT `ext_merchant_id`, `id` FROM `merchants` WHERE ext_merchant_id in ('
-                . join(', ', array_fill(0, count($extIds), '?')) . ');');
-
+            . join(', ', array_fill(0, count($extIds), '?')) . ');');
         $statement->execute($extIds);
         return $statement->fetchAll(PDO::FETCH_KEY_PAIR);
 
@@ -82,8 +81,8 @@ class DbConnector extends PDO
             return [];
         }
         $statement = $this->prepare("SELECT `batch_id`, `id` FROM `batches`"
-                . "WHERE `batch_id` in ("
-                . join(', ', array_fill(0, count($extIds), '?')) . ")");
+            . "WHERE `batch_id` in ("
+            . join(', ', array_fill(0, count($extIds), '?')) . ")");
         $statement->execute($extIds);
         return $statement->fetchAll(PDO::FETCH_KEY_PAIR);
     }
